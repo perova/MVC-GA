@@ -21,13 +21,14 @@ class Game {
 
     public function getTopWinners(int $count): array
     {
-        return $this->db->select("SELECT username, max(result) as max FROM play GROUP BY username ORDER BY max DESC LIMIT :limit",
+        return $this->db->select("SELECT username, max(count) as max FROM play GROUP BY username ORDER BY max DESC LIMIT :limit",
             ['limit' => $count]);
     }
 
+
     public function getTopPlayers(int $count): array
     {
-        return $this->db->select("SELECT username, count(*) as play FROM play GROUP BY username ORDER BY play DESC LIMIT :limit",
+        return $this->db->select("SELECT username, count(*) as count FROM play GROUP BY username ORDER BY count DESC LIMIT :limit",
         ['limit' => $count]);
     }
 }

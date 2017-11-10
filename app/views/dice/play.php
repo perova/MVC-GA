@@ -10,15 +10,13 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="/MVC-G/css/style.css">
 	<!-- <script src="app.js"></script> -->
-	<title>Dice Game</title>
+	 
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="left upper">Welcome<?php
-				echo " " . $_SESSION["username"] . "!";
-				?></h2>
+				 
 				<a class="btn btn-warning right" href="logout.php">LOG OUT</a><br><br>
 				<a class="btn btn-warning right" href="stats.php">MY CHART</a>
 				<h1>Dice Game</h1>
@@ -63,27 +61,7 @@
 
 		
 	</div>
-	<!-- <script >
-		  gameOver = true;
-		function new_game() {
-     if (gameOver) {
-         gameOver = false;
-         // start a game 
-         console.log("Starting a new game..");
-
-//         // clear lucky_numbers array
-         diceTotal = [];
-
-//         // generate ticket of 4 numbers
-         status = [];
-
-        }
-        
- else {
-        alert('Game is not yet over!');    } 
-
-}
-</script> -->
+	
 <script src="/MVC-G/js/jquery.js"></script>
 <script type="text/javascript" src="/MVC-G/js/script.js"></script>
 </body>

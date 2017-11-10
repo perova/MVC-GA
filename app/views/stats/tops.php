@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title><?= $data['title']; ?></title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+
     <style>
         .header {
             font-family: 'Oswald', sans-serif;
@@ -22,24 +24,23 @@
         </div>
     </div>
     <div class="row">
-        <?= $data['body']; ?>
+        <div class="col"><?= $data['body']; ?></div>
+    </div>
+    <div class="row">
 
-        <table class="table">
-            <tr><th>Username</th><th>Result</th><th>Date</th></tr>
-            <?php
+        <div class="col">
+            <h3>Top Wins</h3>
+            <canvas id="winsChart"></canvas>
+        </div>
+        <div class="col">
+            <h3>Top Gamers</h3>
+            <canvas id="gamesChart"></canvas>
+        </div>
 
-            foreach ($data['my_stats'] as $row) {
-                echo "<tr><td>" . $row['username']. "</td>
-                        <td>" . $row['count']. "</td>
-                        <td>" . $row['date']. "</td>
-                        </tr>";
-            }
-
-            ?>
-
-
-        </table>
     </div>
 </div>
+<script src="/MVC-GA/app/views/assets/js/stats.js"></script>
+
 </body>
 </html>
+

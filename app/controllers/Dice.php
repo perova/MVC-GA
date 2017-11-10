@@ -38,7 +38,7 @@ class Dice extends Controller {
         header("Content-type:application/json");
 
         $game = $this->model('Game');
-        $result = $game->getTopPlayers(5);
+        $result = $game->getTopPlayers(10);
 
         echo json_encode($result);
     }
